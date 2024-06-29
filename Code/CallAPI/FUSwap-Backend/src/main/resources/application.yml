@@ -1,0 +1,27 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 
+            client-secret: 
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=FUSwapSystemTest;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: 12345
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        # Hibernate ddl auto (create, create-drop, validate, update)
+        ddl-auto: update
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  session:
+    redis:
+      flush-mode: on_save
+    timeout: 60m

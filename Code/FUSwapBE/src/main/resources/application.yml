@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=FUSwapSystem;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: 12345
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        ddl-auto: update
+        dialect: org.hibernate.dialect.SQLServerDialect
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+  session:
+    redis:
+      flush-mode: on_save
+    timeout: 60m
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 
+            client-secret: 
